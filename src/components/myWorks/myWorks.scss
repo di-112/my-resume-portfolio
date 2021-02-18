@@ -1,0 +1,185 @@
+.myWorks{
+   text-align: center;
+   padding: 0 0 50px 0;
+   position: relative;
+   margin: 0 auto;
+   animation: move-up 1s ease;
+   width: 100%;
+   max-width: 1400px;
+}
+
+.myWorks__title{
+   margin-bottom: 50px;
+}
+
+.myWorks__subtitle{
+   @include adaptiv-font(20,16);
+   margin:0 0 30px 30px;
+   font-weight: bold;
+   color: #363636;
+   text-align: left;
+}
+
+.myWorks__info{
+   text-align: left;
+   margin:0 0 50px 30px;
+   @include adaptiv-font(16,14);
+   & h3{
+      font-weight: bold;
+      @include adaptiv-font(18,15);
+      margin-bottom: 10px;
+   }
+   & div{
+      margin: 0 0 20px 10px;
+      &:last-child{
+         margin-bottom: 0;
+      }
+   }
+}
+
+.myWorks__grid{
+   display: block;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 40px;
+   justify-content: center;
+   @media (max-width: 1250px) {
+      display: block;
+   }
+   &.layouts{
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      & .work__img{ margin-bottom: 20px;}
+    }
+}
+
+.myWorks__slider{
+   width: 50%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.work{
+   padding: 25px 20px;
+   box-shadow: 0 0 20px black;
+   border-radius: 25px;
+   display: grid;
+   align-items: center;
+   grid-template-columns: 57% 43%;
+   grid-template-rows: 30px auto;
+   grid-template-areas:
+   "title title"
+   "img description";
+   & .work__title{
+      @include adaptiv-font(20,15);
+      grid-area: title;
+      font-weight: bold;
+      &::first-letter{text-transform: uppercase;}
+      color: #282828;
+      margin-bottom: 20px;
+   }
+   &.layout{
+      display: flex;
+      width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+   & .work__img{
+      position: relative;
+      grid-area: img;
+      &  img{
+         width: 100%;
+         min-width: 220px;
+         border: 2px solid black;
+         border-radius: 25px;
+         background: black;
+      }
+      &  .work__hover{
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+         top: 0;
+         width: 100%;
+         height: 100%;
+         display: flex;  
+         justify-content: center;
+         align-items: center;
+         background: rgba(255,255,255,0.5);
+         border-radius: 25px;
+         opacity: 0;
+         transition: all 0.7s ease 0s;
+         border: 2px solid black;
+         border-radius: 25px;
+         & a {
+            padding: 20px 40px;
+            color: white;
+            text-transform: uppercase;
+            background: black;
+            border-radius: 10px;
+         }
+      }
+      &:hover{
+         & .work__hover {opacity: 1;}
+      }
+   }
+   & .work__info{
+      grid-area: description;
+      padding: 0 20px;
+      text-align: left;
+      @include adaptiv-font(16,14);
+      & div{
+         margin-bottom: 20px;
+      }
+      & div h3{
+         font-weight: bold;
+         @include adaptiv-font(16,14);
+         margin-bottom: 15px;
+      }
+   }
+   & .work__GHref{
+      font-weight: bold;
+      line-height: 20px;
+      @include adaptiv-font(16,14);
+      &::first-letter{text-transform: uppercase;}
+      & a{
+         font-weight: normal;
+         @include adaptiv-font(14,12);
+         text-decoration: underline;
+      }
+   }
+   @media (max-width: 1250px) {
+      width: 65%;
+      margin: 0 auto 40px;
+      display: block;
+      .work__img img{
+         width: 70%;
+         margin-bottom: 20px;
+      }
+      &.layout img{
+         width: 80%;
+      }
+   }
+   @media (max-width: 600px) {
+      width: 95%;
+   }
+
+}
+
+.myWorks__react{
+   margin-bottom: 80px;
+   @media (max-width: 600px) {
+      margin-bottom: 50px;
+   }
+}
+
+@keyframes move-up {
+   0%{
+      bottom: -100vh;
+   }
+   100%{
+      bottom: 0;
+   }
+}

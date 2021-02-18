@@ -1,0 +1,82 @@
+@import '../../scss/mixins.scss';
+
+.me{
+   display: flex;
+   height: 40vh;
+   min-height: 320px;
+   position: relative;
+   margin: 150px auto 70px;
+   z-index: 2;
+   @media (max-width: 550px) {
+      display: block;
+      margin: 200px auto 50px;
+      height: auto;
+   }
+}
+
+.me__name{
+   position: relative;
+   animation: move-right  1s ease;
+   flex: 0 0 50%;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   & .me__firstName, .me__lastName{
+      @include adaptiv-font(35, 25);
+      margin-bottom: 20px;
+      font-weight: bold;
+      &::first-letter{text-transform: uppercase;}
+      color: #acacac;
+      @media (max-width: 550px) {
+         margin-bottom: 10px;
+      }
+   }
+   & .me__lastName{ color: #252525;}
+   & .me__profession {
+      @include adaptiv-font(20, 15);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #acacac;
+   }
+   @media (max-width: 550px) {
+      margin-bottom: 20px;
+   }
+}
+
+.me__img{
+   position: relative;
+   animation: move-left  1s ease;
+   flex: 0 0 50%;
+   text-align: center;
+   & img{
+      box-shadow: 0 0 50px black;
+      border-radius: 5px;
+      width: 35vw;
+      max-width: 270px;
+      min-width: 150px;
+      height: 100%;
+      min-height: 250px;
+   };
+}
+
+@keyframes move-right {
+   0%{
+      left: -100%;
+   }
+   100%{
+      left: 0;
+   }
+}
+
+
+@keyframes move-left {
+   0%{
+      right: -100%;
+   }
+   100%{
+      right: 0;
+   }
+}

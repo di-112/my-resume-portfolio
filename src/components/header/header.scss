@@ -1,0 +1,68 @@
+@import '../../scss/mixins.scss';
+
+.header{
+   height: 200px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   animation: move-down 1s ease;
+   @media (max-width: 550px) {
+      height: 200px;
+   }
+}
+
+.header__content{
+   position: absolute;
+   left: 50%;
+   top:0;
+   width: 100%;
+   height: 100%;
+   max-width: 1500px;
+   transform: translateX(-50%);
+   padding: 0 20px;
+}
+
+.header__img{
+   background: url('./../../image/backgrd.jpg') center/ cover;
+   width: 51%;
+   position: absolute;
+   top:0;
+   right: 0;
+   height: 100%;
+   border-radius:0 0 0 15px;
+   @media (max-width: 550px) {
+     width: 30%;
+   }
+}
+
+.header__contacts{
+   padding-left: 20px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.header__contact{
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
+   @include adaptiv-font(14, 11);
+   &:last-child{margin-bottom: 0;}
+   & img{
+      width: 25px;
+      margin-right: 10px;
+   }
+}
+
+
+@keyframes move-down {
+   0%{
+      top: -100vh;
+   }
+   100%{
+      top: 0;
+   }
+}

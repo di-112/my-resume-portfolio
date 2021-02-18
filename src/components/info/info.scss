@@ -1,0 +1,137 @@
+.info {
+   display: flex;
+   position: relative;
+   animation: move-up 1s ease;
+   width: 100%;
+   margin-bottom: 100px;
+   @media (max-width:600px) {
+      flex-direction: column;
+      .proSkills{margin-bottom: 50px;}
+   }
+}
+
+.info__column1, .info__column2{
+   flex: 0 0 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0 20px;
+}
+
+.title{
+   @include adaptiv-font(24,20);
+   margin-bottom: 25px;
+   font-weight: bold;
+   color: #363636;
+}
+
+section{
+   margin-bottom: 50px;
+}
+
+@keyframes move-up {
+   0%{
+      bottom: -100vh;
+   }
+   100%{
+      bottom: 0;
+   }
+}
+
+//________________________________________________Experience
+
+.exp__position{
+   @include adaptiv-font(20,16);
+   font-weight: 500;
+   margin-bottom: 10px;
+   color: #282828;
+}
+
+.exp__company{
+   @include adaptiv-font(17,15);
+   margin-bottom: 10px;
+   color: #363636;
+   font-weight: 400;
+   color: #353535;
+}
+
+.exp__description{
+   @include adaptiv-font(18,14);
+   font-weight: 400;
+   color: #707070;
+}
+
+.exp__item{
+   margin-bottom: 40px;
+   &:last-child{
+      margin-bottom: 0;
+   }
+}
+
+//________________________________________________ProSKills
+.proSkills{
+   &>ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &>ul{
+         margin: 0 20px;
+         &:first-child{margin-left: 0}
+         &:last-child{margin-right: 0}
+      }
+   };
+}
+
+
+.proSkills__skill{
+   margin-left: 10px;
+   @include adaptiv-font(18,14);
+   line-height: 1.2;
+   font-weight: 500;
+   color: #282828;
+   margin-bottom: 20px;
+   width: 100%;
+   display: block;
+   &::first-letter{text-transform: uppercase;}
+   & img{
+      width: 30px;
+   } 
+   &:last-child{margin-bottom: 0;}
+}
+
+
+
+//________________________________________________Profile
+
+.profile__description{
+   margin-left: 10px;
+   @include adaptiv-font(20,16);
+   font-weight: 400;
+   color: #999999;
+}
+
+//________________________________________________Education
+
+.education{
+   margin-bottom: 0;
+}
+
+.education__years{
+   @include adaptiv-font(17,16);
+   margin-bottom: 10px;
+   font-weight: 300;
+   color: #707070;
+}
+
+.education__place{
+   @include adaptiv-font(18,16);
+   font-weight: 500;
+   color: #363636;
+   &::first-letter{text-transform: uppercase;}
+}
+
+.education__item{
+   margin-bottom: 30px;
+   margin-left: 10px;
+   &:last-child{margin-bottom: 0;}
+}
