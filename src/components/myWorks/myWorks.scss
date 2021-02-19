@@ -22,7 +22,7 @@
 
 .myWorks__info{
    text-align: left;
-   margin:0 0 50px 30px;
+   margin:0 0 25px 30px;
    @include adaptiv-font(16,14);
    & h3{
       font-weight: bold;
@@ -51,16 +51,44 @@
       & .work__img{ margin-bottom: 20px;}
     }
 }
-
+.slick-list{
+   overflow: hidden;
+}
 .myWorks__slider{
-   width: 50%;
+   width: 80%;
    margin: 0 auto;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   @media (max-width: 1250px) {
+      width: 70%;
+   }
+   & .slick-track{
+      display: flex;
+      align-items: center;
+   }
+   & .slick-slide{
+      padding: 20px 0;
+      opacity: 0;
+      &.slick-active{opacity: 1;}
+   }
+   & .slick-list{
+      overflow: hidden;
+   }
+   & .slick-arrow.slick-prev{
+     background: url(../../image/array-prev.png) 0 0/100% no-repeat;
+   }
+   & .slick-arrow.slick-next{
+      background: url(../../image/array-next.png) 0 0/100% no-repeat;
+    }
+   & .slick-arrow::before,::after{
+      display: none;
+   }
+   &.layouts{
+     width: 50%;
+    }
 }
 
-.work{
+.myWorks__slider .work{
+   width: 85%;
+   margin: 0 auto;
    padding: 25px 20px;
    box-shadow: 0 0 20px black;
    border-radius: 25px;
@@ -86,12 +114,15 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-    }
+      & .work__img{ margin-bottom: 20px;}
+   }
    & .work__img{
       position: relative;
       grid-area: img;
       &  img{
-         width: 100%;
+         width: 90%;
+         height: auto;
+         margin: 0 auto;
          min-width: 220px;
          border: 2px solid black;
          border-radius: 25px;
@@ -102,13 +133,12 @@
          left: 50%;
          transform: translateX(-50%);
          top: 0;
-         width: 100%;
+         width: 90%;
          height: 100%;
          display: flex;  
          justify-content: center;
          align-items: center;
          background: rgba(255,255,255,0.5);
-         border-radius: 25px;
          opacity: 0;
          transition: all 0.7s ease 0s;
          border: 2px solid black;
@@ -151,7 +181,7 @@
       }
    }
    @media (max-width: 1250px) {
-      width: 65%;
+      width: 100%;
       margin: 0 auto 40px;
       display: block;
       .work__img img{
@@ -165,7 +195,6 @@
    @media (max-width: 600px) {
       width: 95%;
    }
-
 }
 
 .myWorks__react{
