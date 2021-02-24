@@ -1,8 +1,11 @@
 import React from 'react'
 
-const proSkills = ['html', 'css', 'JavaScript', 'scss', 
-'bootstrap 5 (базовый уровень)', 'react js (+ redux)',
-'git (github)']
+const proSkills = ['HTML5', 'CSS3 (БЭМ методология,', 'flexbox, Grid layout)', 'SASS/SCSS', 'Avacode/Figma', 'Bootstrap 5 (базовый уровень)',
+'JavaScript (ECMAScript 6)',
+'React js (+ Redux)',
+'Пакетный менеджер NPM',
+'REST API',
+'Git (Github)']
 
 const ProSkills = () => {
    return (
@@ -10,10 +13,10 @@ const ProSkills = () => {
          <h2 className='proSkills__title title'>Навыки</h2>
          <ul>
             <ul>{
-               proSkills.map((skill, index)=>{ if(index<4) return <li className='proSkills__skill'>{skill}<img src={''} alt=""/> </li> })
+               proSkills.map((skill, index)=>{ if(index<6) return <li className='proSkills__skill'>{skill}<img src={''} alt=""/> </li> })
             }</ul>
             <ul>{
-               proSkills.map((skill, index)=>{ if(index>3) return <li className='proSkills__skill'>{skill}<img src={''} alt=""/> </li> })
+               proSkills.map((skill, index)=>{ if(index>5) return <li className='proSkills__skill'>{skill}<img src={''} alt=""/> </li> })
             }</ul>
          </ul>
       </section>
