@@ -92,43 +92,24 @@ export default class MyWorks extends Component {
          swipe: false,
       };
    return (
-      <section className="myWorks">
+      <section className='myWorks'>
          <h2 className='myWorks__title title'>Портфолио</h2>
-         <div className="myWorks__react">
-            <h3 className='myWorks__subtitle'>React приложения</h3>
-            <div className="myWorks__info">
-               <div className="myWorks__descr">
-               <h3>Описание</h3>
-               <p>Приложения выполнены с помощью библиотеки redux. Задействованы react hooks. 
-                  Для написания стилей использовался scss. Запросы на сервер выполняются с помощью библиотеки axios.</p>   
-               </div>
-            </div>
-            <Slider className='myWorks__slider' {...settingsForSLider}>
-               {
-                  this.state.myWorksReact&&this.state.myWorksReact.map(work=><div> <Work {...work} /> </div>)
-               }
-            </Slider>
-         </div>
-         <div className="myWorks__layouts">
-            <h3 className='myWorks__subtitle'>Верстка макетов</h3>
-               <div className="myWorks__info">
-                  <div className="myWorks__descr">
-                     <h3>Описание</h3>
-                     <p>Адаптивная верстка макетов. Стили написаны с помощью языка scss. Для сборки проектов
-                     использовался Prepros. Чтение макетов осуществлялось с помощью Avacode. 
-                     В каждом проекте реализовано меню-бургер при определенном изменении разрешения экрана.</p>   
-                  </div>
-                  <div className="myWorks__technology">
-                     <h3>Стек технологий</h3>
-                     <p>html, css, scss, java script, avacode, prepros</p>   
-                  </div>
-               </div>  
-               <Slider className='myWorks__slider layouts' {...settingsForSLider}>
-                  {
-                     this.state.myWorksLayouts&&this.state.myWorksLayouts.map(work=><div> <Work {...work} /> </div>)
-                  }
-               </Slider>
-         </div>
+         <MyWorksSection 
+            className='myWorks__react' subtitle='React приложения' 
+            descr={`Приложения выполнены с помощью библиотеки redux. Задействованы react hooks. 
+            Для написания стилей использовался scss. Запросы на сервер выполняются с помощью библиотеки axios.`}
+            myWorks={this.state.myWorksReact}
+            settingsForSLider={settingsForSLider}
+         />
+          <MyWorksSection 
+            className='myWorks__layouts' subtitle='Верстка макетов' 
+            descr={`Адаптивная верстка макетов. Стили написаны с помощью языка scss. Для сборки проектов
+            использовался Prepros. Чтение макетов осуществлялось с помощью Avacode. 
+            В каждом проекте реализовано меню-бургер при определенном изменении разрешения экрана.`}
+            myWorks={this.state.myWorksLayouts}
+            settingsForSLider={settingsForSLider}
+            layouts={true}
+         />
       </section>
    )
 }
@@ -136,16 +117,60 @@ export default class MyWorks extends Component {
 
 const img = 'https://avatars.mds.yandex.net/get-pdb/1942669/a3073064-784c-4bbf-92bf-2f742284a07f/s1200?webp=false'
 
+
+const MyWorksSection = (props) => {
+   return (
+      <div className={props.className}>
+            <h3 className='myWorks__subtitle'>{props.subtitle}</h3>
+            <div className="myWorks__info">
+               <div className="myWorks__descr">
+                  <h3>Описание</h3>
+                  <p>{props.descr}</p>   
+               </div>
+               {props.layouts && 
+                  <div className="myWorks__technology">
+                     <h3>Стек технологий</h3>
+                     <p>html, css, scss, java script, avacode, prepros</p>   
+                  </div>}
+            </div>
+            <WorksGrid myWorks={ props.myWorks} settings={props.settingsForSLider} layouts={props.layouts}/>
+      </div>
+   )
+}
+
+const WorksGrid = (props) => {
+   return ( 
+      <div className={`myWorks__grid ${props.layouts&&'layouts'}`}>
+      {
+         props.myWorks&&props.myWorks.map(work=><div> <Work {...work} /> </div>)
+      }
+      </div>
+   )
+}
+
+const WorksSLider = (props) => {
+   return (
+      <Slider className={`myWorks__slider ${props.layouts&&'layouts'}`} {...props.settings}>
+      {
+          props.myWorks&&props.myWorks.map(work=><div> <Work {...work} /> </div>)
+      }
+      </Slider>
+   )
+}
+
 const Work = (props) => {
    if(props.title&&props.descr&&props.tech) return (
       <div className='myWorks__work work'>
          <h2 className='work__title'>{props.title}</h2>
-         <div className='work__img'>
-            <img src={props.img?props.img:img} alt='no image'/>
-            <div className='work__hover'>
-               <a href={props.href?props.href:''} target='blank'>Visit</a>
-            </div>
-         </div> 
+         <div className='work__visit'>
+            <div className='work__img'>
+               <img src={props.img?props.img:img} alt='no image'/>
+               <div className='work__hover'>
+                  <a className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+               </div>
+            </div> 
+            <a  className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+         </div>
          <div className="work__info">
             <div className="work__descr">
                <h3>Описание</h3>
@@ -156,21 +181,26 @@ const Work = (props) => {
                <p>{props.tech}</p>   
             </div>
             <div className='work__GHref'>
-               <span>Github репозиторий: </span><a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
+               <h3>Github репозиторий: </h3><a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
             </div>
          </div>  
       </div>
    )
    else return (
       <div className={'myWorks__work work layout'}>
-         <div className='work__img'>
-            <img src={props.img?props.img:img} alt='no image'/>
-            <div className='work__hover'>
-               <a href={props.href?props.href:''} target='blank'>Visit</a>
+         <div className='work__visit'>
+            <div className='work__img'>
+               <img src={props.img?props.img:img} alt='no image'/>
+               <div className='work__hover'>
+                  <a className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+               </div>
+            </div> 
+         </div>
+         <div className="work__info">
+            <a className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+            <div className='work__GHref'>
+               <h3>Github репозиторий: </h3> <a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
             </div>
-         </div> 
-         <div className='work__GHref'>
-            <span>Github репозиторий: </span> <a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
          </div>
       </div>
    )
