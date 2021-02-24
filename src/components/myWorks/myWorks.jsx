@@ -26,7 +26,7 @@ const myWorksReact = [
       GHref: 'https://github.com/di-112/to-do-list-react',
       descr: `Приложение, предназначенное для составления списка дел. Пользователь может дабавлять либо удалять задачи.
       Все задачи сохраняюся в облачной БД.`,
-      tech: 'html, css, scss, react, redux, google firebase, git' 
+      tech: 'html, css, scss, react, redux, google firebase, git, bootstrap 5' 
    },
    {
       title: 'Магазин книг',
@@ -96,6 +96,13 @@ export default class MyWorks extends Component {
          <h2 className='myWorks__title title'>Портфолио</h2>
          <div className="myWorks__react">
             <h3 className='myWorks__subtitle'>React приложения</h3>
+            <div className="myWorks__info">
+               <div className="myWorks__descr">
+               <h3>Описание</h3>
+               <p>Приложения выполнены с помощью библиотеки redux. Задействованы react hooks. 
+                  Для написания стилей использовался scss. Запросы на сервер выполняются с помощью библиотеки axios.</p>   
+               </div>
+            </div>
             <Slider className='myWorks__slider' {...settingsForSLider}>
                {
                   this.state.myWorksReact&&this.state.myWorksReact.map(work=><div> <Work {...work} /> </div>)
@@ -163,7 +170,7 @@ const Work = (props) => {
             </div>
          </div> 
          <div className='work__GHref'>
-            <span>Github: </span> <a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
+            <span>Github репозиторий: </span> <a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
          </div>
       </div>
    )

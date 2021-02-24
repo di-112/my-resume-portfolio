@@ -4,7 +4,7 @@ const Education = () => {
    return (
       <section className="education">
          <h2 className="education__title title">Образование</h2>
-         <EducationItem years='2016-2020' place='НИУ МИЭТ (Московский Институт Электронной Техники) "Инфоматика и вычистлительняа техника"'/>
+         <EducationItem years='2016-2020' place='НИУ МИЭТ (Московский Институт Электронной Техники) "Инфоматика и вычистлительная техника"'/>
       </section>
    )
 }

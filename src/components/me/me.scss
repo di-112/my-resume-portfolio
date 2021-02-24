@@ -16,7 +16,7 @@
 
 .me__name{
    position: relative;
-   animation: move-right  1s ease;
+   animation: move-right  1.5s ease;
    flex: 0 0 50%;
    padding: 20px;
    display: flex;
@@ -48,7 +48,7 @@
 
 .me__img{
    position: relative;
-   animation: move-left  1s ease;
+   animation: move-left  1.5s ease;
    flex: 0 0 50%;
    text-align: center;
    & img{
