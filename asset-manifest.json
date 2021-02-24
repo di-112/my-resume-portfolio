@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/my-resume-portfolio/static/css/main.4991d1ba.chunk.css",
-    "main.js": "/my-resume-portfolio/static/js/main.62f7d279.chunk.js",
-    "main.js.map": "/my-resume-portfolio/static/js/main.62f7d279.chunk.js.map",
+    "main.css": "/my-resume-portfolio/static/css/main.098f2e91.chunk.css",
+    "main.js": "/my-resume-portfolio/static/js/main.92a3bc98.chunk.js",
+    "main.js.map": "/my-resume-portfolio/static/js/main.92a3bc98.chunk.js.map",
     "runtime-main.js": "/my-resume-portfolio/static/js/runtime-main.5ec9f755.js",
     "runtime-main.js.map": "/my-resume-portfolio/static/js/runtime-main.5ec9f755.js.map",
     "static/css/2.722f70e7.chunk.css": "/my-resume-portfolio/static/css/2.722f70e7.chunk.css",
-    "static/js/2.a4a93214.chunk.js": "/my-resume-portfolio/static/js/2.a4a93214.chunk.js",
-    "static/js/2.a4a93214.chunk.js.map": "/my-resume-portfolio/static/js/2.a4a93214.chunk.js.map",
+    "static/js/2.0c77dd72.chunk.js": "/my-resume-portfolio/static/js/2.0c77dd72.chunk.js",
+    "static/js/2.0c77dd72.chunk.js.map": "/my-resume-portfolio/static/js/2.0c77dd72.chunk.js.map",
     "static/js/3.b49a5229.chunk.js": "/my-resume-portfolio/static/js/3.b49a5229.chunk.js",
     "static/js/3.b49a5229.chunk.js.map": "/my-resume-portfolio/static/js/3.b49a5229.chunk.js.map",
     "index.html": "/my-resume-portfolio/index.html",
     "static/css/2.722f70e7.chunk.css.map": "/my-resume-portfolio/static/css/2.722f70e7.chunk.css.map",
-    "static/css/main.4991d1ba.chunk.css.map": "/my-resume-portfolio/static/css/main.4991d1ba.chunk.css.map",
-    "static/js/2.a4a93214.chunk.js.LICENSE.txt": "/my-resume-portfolio/static/js/2.a4a93214.chunk.js.LICENSE.txt",
+    "static/css/main.098f2e91.chunk.css.map": "/my-resume-portfolio/static/css/main.098f2e91.chunk.css.map",
+    "static/js/2.0c77dd72.chunk.js.LICENSE.txt": "/my-resume-portfolio/static/js/2.0c77dd72.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/my-resume-portfolio/static/media/slick.c94f7671.ttf",
     "static/media/github.8fb842b2.png": "/my-resume-portfolio/static/media/github.8fb842b2.png",
     "static/media/layout_work_1.e5e5cab5.png": "/my-resume-portfolio/static/media/layout_work_1.e5e5cab5.png",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.5ec9f755.js",
     "static/css/2.722f70e7.chunk.css",
-    "static/js/2.a4a93214.chunk.js",
-    "static/css/main.4991d1ba.chunk.css",
-    "static/js/main.62f7d279.chunk.js"
+    "static/js/2.0c77dd72.chunk.js",
+    "static/css/main.098f2e91.chunk.css",
+    "static/js/main.92a3bc98.chunk.js"
   ]
 }
