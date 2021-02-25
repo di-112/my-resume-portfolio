@@ -5,6 +5,7 @@ import workReact1 from '../../image/react_work_1.png'
 import workReact2 from '../../image/react_work_2.png'
 import workReact3 from '../../image/react_work_3.png'
 import workReact4 from '../../image/react_work_4.png'
+import workReact5 from '../../image/react_work_5.png'
 import workLayout1 from '../../image/layout_work_1.png'
 import workLayout2 from '../../image/layout_work_2.png'
 import workLayout3 from '../../image/layout_work_3.png'
@@ -45,6 +46,15 @@ const myWorksReact = [
       descr: `Приложение, в котором пользователь может сделать запрос по поиску кулинарных рецептов с определеммным ингредиентом и 
       ознакомится с подробной информацией об интересующем блюде.`,
       tech: 'html, css, scss, react, redux, git'
+   },
+   {
+      title: 'Резюме-портфолио',
+      img: workReact5, 
+      href: 'https://di-112.github.io/my-resume-portfolio/',
+      GHref: 'https://github.com/di-112/my-resume-portfolio',
+      descr: `Данное резюме разработано с помощью react, а позже переведено в формат PDF. Изначально список работ был выполнен с помощью слайдера, что и показано 
+      в версии по ссылке. Для дальнейшего конвертирования в PDF формат список работ был представлен с использованием grid layout.`,
+      tech: 'html, css, scss, react, git'
    }
 ]
 
@@ -97,7 +107,7 @@ export default class MyWorks extends Component {
          <MyWorksSection 
             className='myWorks__react' subtitle='React приложения' 
             descr={`Приложения выполнены с помощью библиотеки redux. Задействованы react hooks. 
-            Для написания стилей использовался scss. Запросы на сервер выполняются с помощью библиотеки axios.`}
+            Для написания стилей использовался scss. Запросы на сервер выполняются с помощью библиотеки axios. Дизайн каждого приложения выполнен адаптивно.`}
             myWorks={this.state.myWorksReact}
             settingsForSLider={settingsForSLider}
          />

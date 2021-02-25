@@ -3,10 +3,9 @@
    position: relative;
    animation: move-up 2s ease;
    width: 100%;
-   margin-bottom: 100px;
+   margin-bottom: 70px;
    @media (max-width:600px) {
       flex-direction: column;
-      margin-bottom: 70px;
       .proSkills{margin-bottom: 50px;}
    }
 }
