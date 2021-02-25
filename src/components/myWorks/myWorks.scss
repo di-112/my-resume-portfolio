@@ -47,11 +47,13 @@
    padding: 25px 0 10px;
    grid-template-columns: repeat(2, 1fr);
    grid-gap: 40px;
-   margin-bottom: 850px;
+   margin-bottom: 650px;
    @media (max-width: 1250px) {
       display: block;
    }
 }
+
+.myWorks__layouts{padding-top: 100px;}
 
 .myWorks__slider{
    width: 80%;
