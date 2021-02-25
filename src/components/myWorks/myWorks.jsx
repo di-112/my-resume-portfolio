@@ -176,10 +176,10 @@ const Work = (props) => {
             <div className='work__img'>
                <img src={props.img?props.img:img} alt='no image'/>
                <div className='work__hover'>
-                  <a className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+                  <a className='work__ref' href={props.href?props.href:''} target='_blank'>Visit</a>
                </div>
             </div> 
-            <a  className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+            <a  className='work__ref' href={props.href?props.href:''} target='_blank'>Visit</a>
          </div>
          <div className="work__info">
             <div className="work__descr">
@@ -191,7 +191,7 @@ const Work = (props) => {
                <p>{props.tech}</p>   
             </div>
             <div className='work__GHref'>
-               <h3>Github репозиторий: </h3><a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
+               <h3>Github репозиторий: </h3><a target='_blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
             </div>
          </div>  
       </div>
@@ -202,14 +202,14 @@ const Work = (props) => {
             <div className='work__img'>
                <img src={props.img?props.img:img} alt='no image'/>
                <div className='work__hover'>
-                  <a className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+                  <a className='work__ref' href={props.href?props.href:''} target='_blank'>Visit</a>
                </div>
             </div> 
          </div>
          <div className="work__info">
-            <a className='work__ref' href={props.href?props.href:''} target='blank'>Visit</a>
+            <a className='work__ref' href={props.href?props.href:''} target='_blank'>Visit</a>
             <div className='work__GHref'>
-               <h3>Github репозиторий: </h3> <a target='blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
+               <h3>Github репозиторий: </h3> <a target='_blank' href={props.GHref}> {props.GHref?props.GHref:''}</a>
             </div>
          </div>
       </div>

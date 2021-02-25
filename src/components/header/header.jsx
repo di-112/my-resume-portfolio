@@ -8,9 +8,8 @@ const Header = () => {
       <header className='header'>
          <div className="header__content">
             <div className="header__contacts">
-               <Contact image={phoneImg} contact='8-800-555-35-35'/>
-               <Contact image={gmailImg} contact='di150499gmail.com'/>
-               <Contact image={githublImg} contact='di_112'/>
+               <Contact image={gmailImg} contact='di150499gmail.com' href='mailto:di150499@gmail.com'/>
+               <Contact image={githublImg} contact='di-112' href='https://github.com/di-112?tab=repositories'/>
             </div>
          </div>
          <div className='header__img'>
@@ -22,10 +21,10 @@ const Header = () => {
 
 const Contact = (props) => {
    return (
-      <div className='header__contact'>
+      <a className='header__contact' target='_blank' href={props.href}>
          <img src={props.image} alt='not image'/>
          <span>{props.contact}</span>
-      </div>
+      </a>
    )
 }
 
