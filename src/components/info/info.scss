@@ -130,10 +130,12 @@ section{
 }
 
 .education__place{
-   @include adaptiv-font(18,16);
+   @include adaptiv-font(17,16);
    font-weight: 500;
    color: #363636;
    &::first-letter{text-transform: uppercase;}
+   & h3{margin-bottom: 10px;}
+   & span{font-weight: bold;}
 }
 
 .education__item{
