@@ -9,9 +9,9 @@ const Me = () => {
             <span className='me__lastName'>Дмитрий</span>
             <span className='me__profession'>Junior frontend developmer</span>
          </div>
-         <div className='me__img' >
+         {/* <div className='me__img' >
           <img src={myPhoto} alt='not photo'/>
-         </div>
+         </div> */}
       </div>
    )
 }
