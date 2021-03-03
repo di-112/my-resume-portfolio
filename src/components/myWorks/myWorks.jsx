@@ -12,6 +12,15 @@ import workLayout3 from '../../image/layout_work_3.png'
 
 const myWorksReact = [
    {
+      title: 'Магазин книг',
+      img: workReact3, 
+      href: 'https://di-112.github.io/books-shop',
+      GHref: 'https://github.com/di-112/books-shop',
+      descr: `Магазин книг, в котором пользователь может производить поиск по товару, 
+      добавлять/удалять нужную книгу в корзину и наблюдать за изменениями в общей стоимости, определять количество покупаемых экземпляров.`,
+      tech: 'html, css, scss, react, redux, google firebase, git'
+   },
+   {
       title: 'Игра для развития памяти', 
       img: workReact1, 
       href: 'https://di-112.github.io/game-for-memory-react',
@@ -21,22 +30,13 @@ const myWorksReact = [
       tech: 'html, css, scss, react js, redux, git'
    },
    {
-      title: 'Список дел', 
+      title: 'Ежедневник', 
       img: workReact2, 
       href: 'https://di-112.github.io/to-do-list-react',
       GHref: 'https://github.com/di-112/to-do-list-react',
       descr: `Приложение, предназначенное для составления списка дел. Пользователь может дабавлять либо удалять задачи.
-      Все задачи сохраняюся в облачной БД.`,
+      Все задачи сохраняюся в облачной БД, созданной посредством google firebase.`,
       tech: 'html, css, scss, react, redux, google firebase, git, bootstrap 5' 
-   },
-   {
-      title: 'Магазин книг',
-      img: workReact3, 
-      href: 'https://di-112.github.io/books-shop',
-      GHref: 'https://github.com/di-112/books-shop',
-      descr: `Магазин книг, в котором пользователь может производить поиск по товару, 
-      добавлять/удалять нужную книгу в корзину и наблюдать за изменениями в общей стоимости, определять количество покупаемых экземпляров.`,
-      tech: 'html, css, scss, react, redux, google firebase, git'
    },
    {
       title: 'Сборник кулинарных рецептов',
@@ -60,6 +60,11 @@ const myWorksReact = [
 
 const myWorksLayouts = [
    {
+      img:workLayout3,
+      href: 'https://di-112.github.io/layout-web-development-company',
+      GHref: 'https://github.com/di-112/layout-web-development-company'
+   },
+   {
       img:workLayout1,
       href: 'https://di-112.github.io/layout-champions-league',
       GHref: 'https://github.com/di-112/layout-champions-league'
@@ -68,11 +73,6 @@ const myWorksLayouts = [
       img:workLayout2,
       href: 'https://di-112.github.io/layout-golden-company',
       GHref: 'https://github.com/di-112/layout-golden-company'
-   },
-   {
-      img:workLayout3,
-      href: 'https://di-112.github.io/layout-web-development-company',
-      GHref: 'https://github.com/di-112/layout-web-development-company'
    }
 ]
 
