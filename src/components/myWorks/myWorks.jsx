@@ -6,6 +6,7 @@ import workReact2 from '../../image/react_work_2.png'
 import workReact3 from '../../image/react_work_3.png'
 import workReact4 from '../../image/react_work_4.png'
 import workReact5 from '../../image/react_work_5.png'
+import workLayout4 from '../../image/layout_work_4.png'
 import workLayout1 from '../../image/layout_work_1.png'
 import workLayout2 from '../../image/layout_work_2.png'
 import workLayout3 from '../../image/layout_work_3.png'
@@ -60,18 +61,23 @@ const myWorksReact = [
 
 const myWorksLayouts = [
    {
+      img:workLayout4,
+      href: 'https://di-112.github.io/layout-quadrocopter/',
+      GHref: 'https://github.com/di-112/layout-quadrocopter'
+   },
+   {
       img:workLayout3,
-      href: 'https://di-112.github.io/layout-web-development-company',
+      href: 'https://di-112.github.io/layout-web-development-company/',
       GHref: 'https://github.com/di-112/layout-web-development-company'
    },
    {
       img:workLayout1,
-      href: 'https://di-112.github.io/layout-champions-league',
+      href: 'https://di-112.github.io/layout-champions-league/',
       GHref: 'https://github.com/di-112/layout-champions-league'
    },
    {
       img:workLayout2,
-      href: 'https://di-112.github.io/layout-golden-company',
+      href: 'https://di-112.github.io/layout-golden-company/',
       GHref: 'https://github.com/di-112/layout-golden-company'
    }
 ]
@@ -115,7 +121,7 @@ export default class MyWorks extends Component {
             className='myWorks__layouts' subtitle='Верстка макетов' 
             descr={`Адаптивная верстка макетов. Стили написаны с помощью языка scss. Для сборки проектов
             использовался Prepros. Чтение макетов осуществлялось с помощью Avacode. 
-            В каждом проекте реализовано меню-бургер при определенном изменении разрешения экрана.`}
+            В большинстве проектов реализовано меню-бургер при определенном изменении разрешения экрана.`}
             myWorks={this.state.myWorksLayouts}
             settingsForSLider={settingsForSLider}
             layouts={true}
@@ -143,7 +149,7 @@ const MyWorksSection = (props) => {
                      <p>html, css, scss, java script, avacode, prepros</p>   
                   </div>}
             </div>
-            <WorksSLider myWorks={ props.myWorks} settings={props.settingsForSLider} layouts={props.layouts}/>
+            <WorksGrid myWorks={ props.myWorks} settings={props.settingsForSLider} layouts={props.layouts}/>
       </div>
    )
 }
