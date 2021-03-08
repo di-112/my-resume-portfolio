@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/my-resume-portfolio/static/css/main.e0dd1b9c.chunk.css",
-    "main.js": "/my-resume-portfolio/static/js/main.6e518501.chunk.js",
-    "main.js.map": "/my-resume-portfolio/static/js/main.6e518501.chunk.js.map",
+    "main.css": "/my-resume-portfolio/static/css/main.504a1758.chunk.css",
+    "main.js": "/my-resume-portfolio/static/js/main.fd7ad987.chunk.js",
+    "main.js.map": "/my-resume-portfolio/static/js/main.fd7ad987.chunk.js.map",
     "runtime-main.js": "/my-resume-portfolio/static/js/runtime-main.5ec9f755.js",
     "runtime-main.js.map": "/my-resume-portfolio/static/js/runtime-main.5ec9f755.js.map",
     "static/css/2.722f70e7.chunk.css": "/my-resume-portfolio/static/css/2.722f70e7.chunk.css",
@@ -12,13 +12,14 @@
     "static/js/3.b49a5229.chunk.js.map": "/my-resume-portfolio/static/js/3.b49a5229.chunk.js.map",
     "index.html": "/my-resume-portfolio/index.html",
     "static/css/2.722f70e7.chunk.css.map": "/my-resume-portfolio/static/css/2.722f70e7.chunk.css.map",
-    "static/css/main.e0dd1b9c.chunk.css.map": "/my-resume-portfolio/static/css/main.e0dd1b9c.chunk.css.map",
+    "static/css/main.504a1758.chunk.css.map": "/my-resume-portfolio/static/css/main.504a1758.chunk.css.map",
     "static/js/2.0c77dd72.chunk.js.LICENSE.txt": "/my-resume-portfolio/static/js/2.0c77dd72.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/my-resume-portfolio/static/media/slick.c94f7671.ttf",
     "static/media/github.8fb842b2.png": "/my-resume-portfolio/static/media/github.8fb842b2.png",
     "static/media/layout_work_1.e5e5cab5.png": "/my-resume-portfolio/static/media/layout_work_1.e5e5cab5.png",
     "static/media/layout_work_2.ef98046a.png": "/my-resume-portfolio/static/media/layout_work_2.ef98046a.png",
     "static/media/layout_work_3.23cedef9.png": "/my-resume-portfolio/static/media/layout_work_3.23cedef9.png",
+    "static/media/layout_work_4.b5cd45dd.png": "/my-resume-portfolio/static/media/layout_work_4.b5cd45dd.png",
     "static/media/react_work_1.7b03afd7.png": "/my-resume-portfolio/static/media/react_work_1.7b03afd7.png",
     "static/media/react_work_2.5b135eed.png": "/my-resume-portfolio/static/media/react_work_2.5b135eed.png",
     "static/media/react_work_3.239cf235.png": "/my-resume-portfolio/static/media/react_work_3.239cf235.png",
@@ -29,7 +30,7 @@
     "static/js/runtime-main.5ec9f755.js",
     "static/css/2.722f70e7.chunk.css",
     "static/js/2.0c77dd72.chunk.js",
-    "static/css/main.e0dd1b9c.chunk.css",
-    "static/js/main.6e518501.chunk.js"
+    "static/css/main.504a1758.chunk.css",
+    "static/js/main.fd7ad987.chunk.js"
   ]
 }
