@@ -149,7 +149,7 @@ const MyWorksSection = (props) => {
                      <p>html, css, scss, java script, avacode, prepros</p>   
                   </div>}
             </div>
-            <WorksGrid myWorks={ props.myWorks} settings={props.settingsForSLider} layouts={props.layouts}/>
+            <WorksSLider myWorks={ props.myWorks} settings={props.settingsForSLider} layouts={props.layouts}/>
       </div>
    )
 }
