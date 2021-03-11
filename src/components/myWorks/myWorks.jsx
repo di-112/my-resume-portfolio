@@ -112,15 +112,15 @@ export default class MyWorks extends Component {
          <h2 className='myWorks__title title'>Портфолио</h2>
          <MyWorksSection 
             className='myWorks__react' subtitle='React приложения' 
-            descr={`Приложения выполнены с помощью библиотеки redux. Задействованы react hooks. 
+            descr={`Приложения выполнены с использованием библиотеки redux. Задействованы react hooks. 
             Для написания стилей использовался scss. Запросы на сервер выполняются с помощью библиотеки axios. Дизайн каждого приложения выполнен адаптивно.`}
             myWorks={this.state.myWorksReact}
             settingsForSLider={settingsForSLider}
          />
           <MyWorksSection 
             className='myWorks__layouts' subtitle='Верстка макетов' 
-            descr={`Адаптивная верстка макетов. Стили написаны с помощью языка scss. Для сборки проектов
-            использовался Prepros. Чтение макетов осуществлялось с помощью Avacode. 
+            descr={`Адаптивная верстка макетов. Стили написаны с помощью языка scss. Для интерактивности задействованы скирпты на js, jquery. Cборки проектов
+            осуществлялись посредством Prepros. Для чтения макетов использовались Avacode, Marsy. 
             В большинстве проектов реализовано меню-бургер при определенном изменении разрешения экрана.`}
             myWorks={this.state.myWorksLayouts}
             settingsForSLider={settingsForSLider}
